@@ -15,6 +15,9 @@ final public class calculator1 {
                                         ja,new JTextArea(),new JTextArea(),new JTextArea(), new JTextArea(),ja
                                     };
     private int count=0;
+    JOptionPane.showMessageDialog(frame,"Supported operations are only addtion");
+    // subtraction added....
+    JOptionPane.showMessageDialog(frame,"Supported operations are only subtraction");
 
     private calculator1(){
 
@@ -40,6 +43,8 @@ final public class calculator1 {
 
             j.add(b[i]);
         }
+`       // Modulus added....
+        JOptionPane.showMessageDialog(frame,"Modulus operations are added
 
         bPlus=new JButton("+");
         bMinus=new JButton("-");
@@ -154,6 +159,7 @@ final public class calculator1 {
     }
 
     public static void main(String[] args) {
+//        JOptionPane.showMessageDialog(frame,"Supported operations are only addtion,subtraction");
         new calculator1();
     }
 }
