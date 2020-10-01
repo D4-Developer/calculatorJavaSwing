@@ -1,15 +1,18 @@
 import javax.swing.*;
+import java.util.*;
 import java.awt.Color;
+import java.awt.assests.*;
 
 final public class calculator1 {
     JFrame j=new JFrame();
+    JAssest ja = new JAssests();
     JButton b[]=new JButton[]{
                                 new JButton(),new JButton(),new JButton(),new JButton(),new JButton(),
-                                new JButton(),new JButton(),new JButton(),new JButton(),new JButton()
+                                new JButton(),new JButton(),new JButton(),new JButton(),new JButton(),ja
                              };
     JButton bPlus,bMinus,bMultiply,bDivision,bPercentage,bSign,bAC,bDot,bEquals,bNone;
     JTextArea a[] = new JTextArea[] {
-                                        new JTextArea(),new JTextArea(),new JTextArea(), new JTextArea()
+                                        ja,new JTextArea(),new JTextArea(),new JTextArea(), new JTextArea(),ja
                                     };
     private int count=0;
 
@@ -28,12 +31,12 @@ final public class calculator1 {
 
         for (int i = 0; i <10 ; i++) {
             b[i]=new JButton(""+i);
-            //  b0.setForeground(Color.BLUE);
+             b0.setForeground(Color.BLUE);
 
             int finalI = i;
             b[i].addActionListener(e -> a[count].setText(a[count].getText()+ finalI));
 
-            //  b[i].setContentAreaFilled(Color.cyan);
+             b[i].setContentAreaFilled(Color.cyan);
 
             j.add(b[i]);
         }
@@ -48,6 +51,8 @@ final public class calculator1 {
         bDot=new JButton(".");
         bEquals=new JButton("=");
         bNone=new JButton("");
+        dnote = new JTextArea("About: ")
+        
 
         b[0].setBounds(0,494,70,70);
         bNone.setBounds(72,494,70,70);
